@@ -1,6 +1,6 @@
 from books import books
 
-print(books[0])
+# print(books[0])
 #  number_of_authors(book)
 #  recieves a book dictionary
 #  returns the number of authors that the book has
@@ -71,7 +71,11 @@ print(calculate_not_available_books(books))
 # recieves a list of book dictionaries
 # returns the book dictionary that contains an author with the author name provided
 def get_book_by_author_name(author_name, books):
-    ...
+    author_name_book=[]
+    for book in books:
+        for author in book['authors']:
+            if author['name'] == author_name:
+                author_name_book.append(book)
 
-
+    return author_name_book
 print(get_book_by_author_name("Neil Gaiman", books))
