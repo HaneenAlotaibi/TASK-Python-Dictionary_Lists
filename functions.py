@@ -5,9 +5,10 @@ print(books[0])
 #  recieves a book dictionary
 #  returns the number of authors that the book has
 def number_of_authors(book):
-    ...
-
-
+    conut=0
+    for n_author in book['authors']:
+        conut=conut+1
+    return conut
 print(number_of_authors(books[0]))
 
 #  get_book_by_id(book_id, books)
